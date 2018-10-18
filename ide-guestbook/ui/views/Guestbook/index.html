@@ -1,1 +1,67 @@
-<h1>Guestbook</h1>
+<!DOCTYPE html>
+<html lang="en" ng-app="page">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<link type="text/css" rel="stylesheet" href="/services/v3/core/theme/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="/services/v3/web/resources/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link type="text/css" rel="stylesheet" href="custom.css">
+	<link type="image/png" rel="shortcut icon" href="/services/v3/web/resources/images/favicon.png" />
+</head>
+
+<body ng-controller="PageController">
+	<div class="container">
+		<h1>Guestbook</h1>
+		<hr>
+
+		<div class="row">
+			<div class="review-block" ng-repeat="next in reviews">
+				<div class="row">
+					<div class="col-sm-3 text-center">
+						<img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
+						<div class="review-block-name"><a href="#">{{next.user}}</a></div>
+						<div class="review-block-date">{{next.date.toLocaleDateString()}}</div>
+					</div>
+					<div class="col-sm-9">
+						<div class="review-block-rate">
+							<button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+							  <span class="fa fa-star" aria-hidden="true"></span>
+							</button>
+							<button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+							  <span class="fa fa-star" aria-hidden="true"></span>
+							</button>
+							<button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+							  <span class="fa fa-star" aria-hidden="true"></span>
+							</button>
+							<button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+							  <span class="fa fa-star" aria-hidden="true"></span>
+							</button>
+							<button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+							  <span class="fa fa-star" aria-hidden="true"></span>
+							</button>
+						</div>
+						<div class="review-block-title">{{next.text.substring(0, 20) + "..."}}</div>
+						<div class="review-block-description">{{next.text}}</div>
+					</div>
+				</div>
+				<hr/>
+			</div>
+		</div>
+	</div><!-- /container -->
+
+	<script type="text/javascript" src="/services/v3/web/resources/jquery/2.0.3/jquery.min.js"></script>
+	<script type="text/javascript" src="/services/v3/web/resources/bootstrap/3.3.7/bootstrap.min.js" async></script>
+	<script type="text/javascript" src="/services/v3/web/resources/angular/1.4.7/angular.min.js"></script>
+	<script type="text/javascript" src="/services/v3/web/resources/angular/1.4.7/angular-resource.min.js"></script>
+	<script type="text/javascript" src="/services/v3/web/ide-core/ui/message-hub.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.min.js"></script>
+	<script type="text/javascript" src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
+
+	<script type="text/javascript" src="controller.js"></script>
+
+</body>
+</html>

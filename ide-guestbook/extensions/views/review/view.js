@@ -10,11 +10,11 @@
 
 exports.getView = function() {
 	return {
-			'id': 'comments',
-			'name': 'Comments',
+			'id': 'review',
+			'name': 'Review',
 			'factory': 'frame',
 			'region': 'left-bottom',
-			'label': 'Comments',
-			'link': '../ide-guestbook/ui/views/Comments/index.html'
+			'label': 'Review',
+			'link': '../ide-guestbook/ui/views/Review/index.html'
 	};
 };

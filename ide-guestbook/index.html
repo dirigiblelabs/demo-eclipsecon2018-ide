@@ -68,7 +68,7 @@
 		.controller('GuestbookController', ['Layouts', function (Layouts) {
 			
 			this.layoutModel = {
-				views: ['feedback', 'comments'],
+				views: ['guestbook', 'review'],
 				events: {
 					'fileselected': function(msg){
 						Layouts.manager.openEditor(msg.data.path, msg.data.label);
