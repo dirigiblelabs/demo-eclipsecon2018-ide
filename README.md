@@ -13,4 +13,4 @@ Guestbook demo perspective and views:
 - [/services/v3/web/ide-guestbook/](http://localhost:8080/services/v3/web/ide-guestbook/)
 
 ## Related Demos
-- none
+- [IDE - Layout](https://github.com/dirigiblelabs/demo-eclipsecon2018-ide-layout)
